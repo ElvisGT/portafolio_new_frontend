@@ -7,6 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    fontFamily:{
+      'Itim':['Itim']
+    },
     colors:{
       ...colors,
       'main':'#7A4811'
