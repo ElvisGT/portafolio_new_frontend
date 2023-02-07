@@ -30,10 +30,11 @@ export const NavigationMenu = () => {
     <div className="w-screen 
                     h-16
                     z-10 
-					absolute
+					fixed
 					top-0
 					flex
 					bg-main
+					opacity-80
                     md:border-r-2
                     md:w-96
                     md:h-screen">
@@ -51,7 +52,7 @@ export const NavigationMenu = () => {
 					ml-4
 					mr-6 
 					text-white
-					">
+					" key={item.link}>
 				<Link to={item.link}>{item.description}</Link>
 			</li>
 		)
