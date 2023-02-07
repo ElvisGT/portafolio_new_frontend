@@ -12,7 +12,7 @@ export const router = createHashRouter([
             },
             {
                 path: "/menu2",
-                element:<h1 className='bg-green-700 h-screen'>Menu2</h1>,
+                element:<h1 className='bg-green-700 h-screen z-10'>Menu2</h1>,
               },
               {
                 path: "/menu3",
