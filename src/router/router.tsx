@@ -1,5 +1,6 @@
 import {createHashRouter} from 'react-router-dom'
 import App from '../App'
+import { About } from '../components/About'
 
 export const router = createHashRouter([
     {
@@ -8,11 +9,11 @@ export const router = createHashRouter([
         children: [
             {
               path: "/about",
-              element:<h1 className='bg-yellow-300 h-screen'>About</h1>,
+              element:<About />,
             },
             {
                 path: "/skill",
-                element:<h1 className='bg-green-700 h-screen z-10'>Skill</h1>,
+                element:<h1 className='h-screen z-10'>Skill</h1>,
               },
               {
                 path: "/projects",
