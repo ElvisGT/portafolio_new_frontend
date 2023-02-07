@@ -7,20 +7,20 @@ export const router = createHashRouter([
         element:<App />,
         children: [
             {
-              path: "/menu",
-              element:<h1 className='bg-yellow-300 h-screen'>Menu</h1>,
+              path: "/about",
+              element:<h1 className='bg-yellow-300 h-screen'>About</h1>,
             },
             {
-                path: "/menu2",
-                element:<h1 className='bg-green-700 h-screen z-10'>Menu2</h1>,
+                path: "/skill",
+                element:<h1 className='bg-green-700 h-screen z-10'>Skill</h1>,
               },
               {
-                path: "/menu3",
-                element:<h1 className='bg-blue-700 h-screen'>Menu3</h1>,
+                path: "/projects",
+                element:<h1 className='bg-blue-700 h-screen'>Projects</h1>,
               },
               {
-                path: "/menu4",
-                element:<h1 className='bg-violet-700 h-screen'>Menu3</h1>,
+                path: "/contact",
+                element:<h1 className='bg-violet-700 h-screen'>Contact</h1>,
               },
           ],
     },

@@ -15,7 +15,7 @@ const navigation: navigationMenu[] = [
 		description:'Habilidades'
 	},
 	{
-		link:'/proyects',
+		link:'/projects',
 		description:'Proyectos'
 	},
 	{
