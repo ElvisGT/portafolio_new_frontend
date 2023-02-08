@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom"
-import { navigationMenu } from "../types/navigationMenu"
+import { navigationMenuType } from "../types/"
 
-const navigation: navigationMenu[] = [
+const navigation: navigationMenuType[] = [
 	{
 		link: '/',
 		description: 'Inicio'

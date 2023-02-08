@@ -10,6 +10,7 @@ export const Home = () => {
 					object-cover
 					md:absolute
 					"
+			alt="Imagen de escritorio con laptop"
 		/>
         <div className='bg-black opacity-70 h-full absolute top-0'>
 				<h1 className='text-6xl

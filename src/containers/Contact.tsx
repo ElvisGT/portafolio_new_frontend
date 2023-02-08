@@ -1,28 +1,30 @@
-import {useRef, FormEvent} from 'react'
-import {useContact} from '../hooks/useContact'
+import { useRef, FormEvent } from 'react'
+import { Button } from '../components/Button'
+import { Input } from '../components/Input'
+import { useContact } from '../hooks/useContact'
 
 export const Contact = () => {
 	const inputName = useRef(null)
 	const inputEmail = useRef(null)
 	const inputComment = useRef(null)
-	
-	const handleSubmit = (event:FormEvent) => {
+
+	const handleSubmit = (event: FormEvent) => {
 		event.preventDefault()
 		const data = {
 			//@ts-ignore
-			name:inputName.current?.value,
+			name: inputName.current?.value,
 			//@ts-ignore
-			email:inputEmail.current?.value,
+			email: inputEmail.current?.value,
 			//@ts-ignore
-			comment:inputComment.current?.value
+			comment: inputComment.current?.value
 		}
 
 		useContact(data)
-		
+
 	}
 	return (
 		<div className="bg-white 
-						h-screen 
+						min-h-screen 
 						w-full 
 						flex 
 						flex-col 
@@ -31,40 +33,18 @@ export const Contact = () => {
 			<h2 className="text-3xl mt-8 mb-4 ">Contacto</h2>
 			<form onSubmit={handleSubmit} className="flex flex-col justify-evenly items-center h-96">
 				<label htmlFor="name">
-					<input id="name"
-						type="text"
-						required
-						placeholder="nombre"
-						className="border-main
-									outline-none
-									border-2
-									p-2
-									rounded-xl
-									w-64
-									h-12
-									focus-visible:border-alert
-									focus-visible:border-4
-									shadow-lg"
+					<Input id='name'
 						name='name'
-						ref={inputName}/>
+						placeholder='nombre'
+						type='text'
+						ref={inputName} />
 				</label>
 				<label htmlFor="email">
-					<input id="email"
-						type="email"
-						required
-						placeholder="email"
-						className="border-main
-									outline-none
-									border-2
-									p-2
-									rounded-xl
-									w-64
-									h-12
-									focus-visible:border-alert
-									focus-visible:border-4
-									shadow-lg"
-						name="email"
-						ref={inputEmail}/>
+					<Input id='email'
+						name='email'
+						placeholder='email'
+						type='email'
+						ref={inputEmail} />
 				</label>
 				<label htmlFor="comment">
 					<textarea id="comment"
@@ -81,17 +61,9 @@ export const Contact = () => {
 									focus-visible:border-4
 									shadow-lg"
 						name="comment"
-						ref={inputComment}/>
+						ref={inputComment} />
 				</label>
-				<input type="submit"
-					value="Enviar"
-					className="bg-main
-									w-20
-									h-8
-									text-white
-									rounded-xl
-								  hover:bg-alert
-								  "/>
+				<Button text='Enviar' type='submit'/>
 			</form>
 		</div>
 	)

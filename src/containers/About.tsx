@@ -1,7 +1,7 @@
 
 export const About = () => {
   return (
-    <div className="h-screen
+    <div className="min-h-screen
                  bg-white 
                  z-0 
                  flex 

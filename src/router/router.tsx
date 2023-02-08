@@ -1,6 +1,6 @@
 import {createHashRouter} from 'react-router-dom'
 import App from '../App'
-import { About,Contact } from '../containers/'
+import { About,Contact,Projects } from '../containers/'
 
 export const router = createHashRouter([
     {
@@ -17,7 +17,7 @@ export const router = createHashRouter([
               },
               {
                 path: "/projects",
-                element:<h1 className='bg-blue-700 h-screen'>Projects</h1>,
+                element:<Projects />,
               },
               {
                 path: "/contact",

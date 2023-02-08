@@ -1,4 +1,4 @@
-import { contactType } from "../types/navigationMenu";
+import { contactType } from "../types/navigationMenuType";
 
 export const useContact = (data:contactType) => {
     console.log(data)
