@@ -12,7 +12,8 @@ module.exports = {
     },
     colors:{
       ...colors,
-      'main':'#7A4811'
+      'main':'#415a77',
+      'alert':'#c1121f'
     }
   },
   plugins: [
