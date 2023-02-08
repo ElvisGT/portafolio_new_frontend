@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import { navigationMenu } from "../types/navigationMenu"
 
 const navigation: navigationMenu[] = [
@@ -26,7 +26,6 @@ const navigation: navigationMenu[] = [
 
 
 export const NavigationMenu = () => {
-	
 	return (
 		<div className="w-screen 
                     h-16
@@ -53,9 +52,17 @@ export const NavigationMenu = () => {
 					mr-6 
 					text-white
 					"
-					key={item.link}
+						key={item.link}
 					>
-						<Link to={item.link}>{item.description}</Link>
+						<NavLink to={item.link}
+							className={({ isActive }) =>
+								isActive
+									? "text-alert"
+									: ""
+							}
+						>
+							{item.description}
+						</NavLink>
 					</li>
 				)
 				)}
