@@ -2,37 +2,11 @@ import { useState } from "react"
 import { Button } from "../components/Button"
 import { Input } from "../components/Input"
 import { ProjectsItem } from "../components/ProjectsItem"
+import { useProjects } from "../hooks/useProjects"
 
 export const Projects = () => {
 	const [stack, setStack] = useState('frontend')
-
-	//informacion de prueba
-	const data = [
-		{
-			imgAlt:"Mesa con laptop",
-			imgUri:"https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
-			name:"Proyecto 1",
-			techs:['js','ts','react']
-		},
-		{
-			imgAlt:"Mesa con laptop",
-			imgUri:"https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
-			name:"Proyecto 2",
-			techs:['python']
-		},
-		{
-			imgAlt:"Mesa con laptop",
-			imgUri:"https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
-			name:"Proyecto 3",
-			techs:['js','html','css']
-		},
-		{
-			imgAlt:"Mesa con laptop",
-			imgUri:"https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
-			name:"Proyecto 4",
-			techs:['js','ts','react','mongodb','node','express','mysql','docker','python']
-		},
-	]
+	const {frontend,backend,fullstack} = useProjects()
 
 	const handleStack = (stack: string) => {
 		setStack(stack)
@@ -67,7 +41,7 @@ export const Projects = () => {
 			</div>
 			<div>
 				{stack === 'frontend' &&
-					data.map(item => (
+					frontend.map(item => (
 						<ProjectsItem imgAlt={item.imgAlt}
 										imgUri={item.imgUri}
 										name={item.name}
@@ -76,11 +50,22 @@ export const Projects = () => {
 					))
 				}
 				{stack === 'backend' &&
-					<h1>Aqui los proyectos backend</h1>
-					
+					backend.map(item => (
+						<ProjectsItem imgAlt={item.imgAlt}
+										imgUri={item.imgUri}
+										name={item.name}
+										techs={item.techs}
+										key={item.name}/>
+					))
 				}
 				{stack === 'fullstack' &&
-					<h1>Aqui los proyectos fullstack</h1>
+					fullstack.map(item => (
+						<ProjectsItem imgAlt={item.imgAlt}
+										imgUri={item.imgUri}
+										name={item.name}
+										techs={item.techs}
+										key={item.name}/>
+					))
 				}
 			</div>
 
