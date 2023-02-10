@@ -49,7 +49,8 @@ export const Projects = () => {
 			</div>
 			<div className="flex 
 							justify-evenly 
-							w-80
+							flex-wrap
+							min-w-80
 							mt-8">
 				<Button type="text" handleStack={() => handleStack('frontend')} text="Frontend" 
 						customClass={stack === 'frontend' ? true : false}/>
@@ -59,6 +60,9 @@ export const Projects = () => {
 			
 				<Button type="text" handleStack={() => handleStack('fullstack')} text="Fullstack" 
 						customClass={stack === 'fullstack'? true : false}/>
+				
+				<Button type="text" handleStack={() => handleStack('all')} text="Todos" 
+						customClass={stack === 'all'? true : false}/>
 						
 			</div>
 			<div>
@@ -71,6 +75,16 @@ export const Projects = () => {
 										stack={item.stack}
 										key={item.name}/>
 				))}
+				{(stack === 'all' && finded.length === 0) &&
+					allProjects.map(item => (
+						<ProjectsItem imgAlt={item.imgAlt}
+										imgUri={item.imgUri}
+										name={item.name}
+										techs={item.techs}
+										stack={item.stack}
+										key={item.name}/>
+					))
+				}
 				{(stack === 'frontend' && finded.length === 0) &&
 					frontend.map(item => (
 						<ProjectsItem imgAlt={item.imgAlt}
