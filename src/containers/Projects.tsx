@@ -6,7 +6,7 @@ import { useProjects } from "../hooks/useProjects"
 import { projectProps } from "../types"
 
 export const Projects = () => {
-	const [stack, setStack] = useState('frontend')
+	const [stack, setStack] = useState('all')
 	const inputRef = useRef(null) 
 	const {frontend,backend,fullstack,allProjects} = useProjects()
 	const [finded,setFinded] = useState(Array<projectProps>)
@@ -25,7 +25,7 @@ export const Projects = () => {
 			})
 		}else {
 			setFinded([])
-			setStack('frontend')
+			setStack('all')
 		}
 	}	
 
@@ -52,6 +52,9 @@ export const Projects = () => {
 							flex-wrap
 							min-w-80
 							mt-8">
+				<Button type="text" handleStack={() => handleStack('all')} text="Todos" 
+						customClass={stack === 'all'? true : false}/>
+
 				<Button type="text" handleStack={() => handleStack('frontend')} text="Frontend" 
 						customClass={stack === 'frontend' ? true : false}/>
 						
@@ -61,8 +64,6 @@ export const Projects = () => {
 				<Button type="text" handleStack={() => handleStack('fullstack')} text="Fullstack" 
 						customClass={stack === 'fullstack'? true : false}/>
 				
-				<Button type="text" handleStack={() => handleStack('all')} text="Todos" 
-						customClass={stack === 'all'? true : false}/>
 						
 			</div>
 			<div>

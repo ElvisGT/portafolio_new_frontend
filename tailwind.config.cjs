@@ -6,7 +6,11 @@ module.exports = {
     "./src/**/*.{html,js,jsx,tsx}"
   ],
   theme: {
-    extend: {},
+    extend: {
+      animation:{
+          'oncePulse': 'pulse 1s ease-in-out 1',
+      }
+    },
     fontFamily:{
       'Itim':['Itim']
     },
@@ -14,7 +18,8 @@ module.exports = {
       ...colors,
       'main':'#415a77',
       'alert':'#c1121f'
-    }
+    },
+    
   },
   plugins: [
   ],

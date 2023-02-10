@@ -10,7 +10,8 @@ export const ProjectsItem = ({imgUri,imgAlt,name,techs}:projectProps) => {
                             my-8
                             flex
                             items-end
-                            rounded-xl">
+                            rounded-xl
+                            animate-oncePulse">
             <img src={imgUri}
                 className="
                             min-w-48
