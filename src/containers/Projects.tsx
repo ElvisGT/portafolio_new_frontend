@@ -1,12 +1,33 @@
-import { useState } from "react"
+import { useState,useRef } from "react"
 import { Button } from "../components/Button"
 import { Input } from "../components/Input"
 import { ProjectsItem } from "../components/ProjectsItem"
 import { useProjects } from "../hooks/useProjects"
+import { projectProps } from "../types"
 
 export const Projects = () => {
 	const [stack, setStack] = useState('frontend')
-	const {frontend,backend,fullstack} = useProjects()
+	const inputRef = useRef(null) 
+	const {frontend,backend,fullstack,allProjects} = useProjects()
+	const [finded,setFinded] = useState(Array<projectProps>)
+
+	const handleSearch = () => {
+		//@ts-ignore
+		const userSearch:string = inputRef.current?.value
+		const projectsFinded = allProjects.filter((item) => {
+			return item.name.toLowerCase().includes(userSearch.toLowerCase())
+		})
+
+		if(projectsFinded.length === 1){
+			setFinded(projectsFinded)
+			projectsFinded.forEach(project => {
+				setStack(project.stack)
+			})
+		}else {
+			setFinded([])
+			setStack('frontend')
+		}
+	}	
 
 	const handleStack = (stack: string) => {
 		setStack(stack)
@@ -19,11 +40,12 @@ export const Projects = () => {
 							flex-col 
 							items-center ">
 			<div className="mt-8">
-				<Input id="projects"
-					name="projects"
-					placeholder="nombre del proyecto"
-					type="text"
-				/>
+				<Input ref={inputRef}
+						name="projects"
+						id="projects"
+						placeholder="nombre del proyecto"
+						type="text"
+						handleSearch={handleSearch}/>
 			</div>
 			<div className="flex 
 							justify-evenly 
@@ -40,33 +62,47 @@ export const Projects = () => {
 						
 			</div>
 			<div>
-				{stack === 'frontend' &&
+				{finded.length > 0 &&
+					finded.map((item) => (
+					<ProjectsItem imgAlt={item.imgAlt}
+										imgUri={item.imgUri}
+										name={item.name}
+										techs={item.techs}
+										stack={item.stack}
+										key={item.name}/>
+				))}
+				{(stack === 'frontend' && finded.length === 0) &&
 					frontend.map(item => (
 						<ProjectsItem imgAlt={item.imgAlt}
 										imgUri={item.imgUri}
 										name={item.name}
 										techs={item.techs}
+										stack={item.stack}
 										key={item.name}/>
 					))
 				}
-				{stack === 'backend' &&
+				{(stack === 'backend' && finded.length === 0) &&
 					backend.map(item => (
 						<ProjectsItem imgAlt={item.imgAlt}
 										imgUri={item.imgUri}
 										name={item.name}
 										techs={item.techs}
+										stack={item.stack}
 										key={item.name}/>
 					))
 				}
-				{stack === 'fullstack' &&
+				{(stack === 'fullstack' && finded.length === 0) &&
 					fullstack.map(item => (
 						<ProjectsItem imgAlt={item.imgAlt}
 										imgUri={item.imgUri}
 										name={item.name}
 										techs={item.techs}
+										stack={item.stack}
 										key={item.name}/>
 					))
 				}
+				
+
 			</div>
 
 		</div>
