@@ -1,3 +1,4 @@
+import {ImageComponent} from '../components/ImageComponent'
 
 export const About = () => {
   return (
@@ -10,16 +11,15 @@ export const About = () => {
 
       <h2 className="font-bold 
                     text-3xl 
-                    my-6">
+                    my-6
+                    drop-shadow-md">
         ElvisGT
       </h2>
-      <img className="h-56 
-                    w-56
-                    rounded-full 
-                    ring-4
-                  ring-main"
-
-        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt=""></img>
+      <ImageComponent src='https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80'
+        alt='a'
+        height='56'
+        width='56'
+      />
       <p className="mx-2 my-8 leading-normal text-lg text-center">Mi nombre es Elvis y soy un desarrollador de software 
         apasionado por la programación y las computadoras.
         LLevo 3 años estudiando y superándome de forma autodidacta, realizando numerosos proyectos

@@ -11,7 +11,7 @@ const navigation: navigationMenuType[] = [
 		description: 'Acerca'
 	},
 	{
-		link: '/skill',
+		link: '/skills',
 		description: 'Habilidades'
 	},
 	{

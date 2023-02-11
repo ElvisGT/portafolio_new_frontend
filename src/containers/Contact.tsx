@@ -30,7 +30,7 @@ export const Contact = () => {
 						flex-col 
 						items-center 
 						fixed">
-			<h2 className="text-3xl mt-8 mb-4 ">Contacto</h2>
+			<h2 className="text-3xl mt-8 mb-4 drop-shadow-md">Contacto</h2>
 			<form onSubmit={handleSubmit} className="flex flex-col justify-evenly items-center h-96">
 				<label htmlFor="name">
 					<Input id='name'
