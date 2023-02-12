@@ -1,6 +1,7 @@
 import { useRef, FormEvent } from 'react'
 import { Button } from '../components/Button'
 import { Input } from '../components/Input'
+import { SocialNetworks } from '../components/SocialNetworks'
 import { useContact } from '../hooks/useContact'
 
 export const Contact = () => {
@@ -29,8 +30,9 @@ export const Contact = () => {
 						flex 
 						flex-col 
 						items-center 
-						fixed">
+						">
 			<h2 className="text-3xl mt-8 mb-4 drop-shadow-md">Contacto</h2>
+			<SocialNetworks />
 			<form onSubmit={handleSubmit} className="flex flex-col justify-evenly items-center h-96">
 				<label htmlFor="name">
 					<Input id='name'
