@@ -1,3 +1,4 @@
+import { Button } from '../components/Button'
 import {ImageComponent} from '../components/ImageComponent'
 
 export const About = () => {
@@ -20,6 +21,9 @@ export const About = () => {
         height='56'
         width='56'
       />
+      <a  href="pdf/Elvis-CV.pdf" download="Elvis-CV.pdf" className='mt-4'>
+        <Button text='Descargar CV' type='button'/>
+      </a>
       <p className="mx-2 my-8 leading-normal text-lg text-center">Mi nombre es Elvis y soy un desarrollador de software 
         apasionado por la programación y las computadoras.
         LLevo 3 años estudiando y superándome de forma autodidacta, realizando numerosos proyectos
