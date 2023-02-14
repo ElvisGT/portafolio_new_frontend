@@ -1,5 +1,6 @@
 import { useState,useRef } from "react"
 import { Button } from "../components/Button"
+import { ButtonUp } from "../components/ButtonUp"
 import { Input } from "../components/Input"
 import { ProjectsItem } from "../components/ProjectsItem"
 import { useProjects } from "../hooks/useProjects"
@@ -29,12 +30,14 @@ export const Projects = () => {
 		}
 	}	
 
+	
+
 	const handleStack = (stack: string) => {
 		setStack(stack)
 
 	}
 	return (
-		<div className="bg-white 
+		<div id="projects" className="bg-white 
 							min-h-screen 
 							flex 
 							flex-col 
@@ -51,7 +54,7 @@ export const Projects = () => {
 							justify-evenly 
 							flex-wrap
 							min-w-80
-							mt-8">
+							my-8">
 				<Button type="text" handleStack={() => handleStack('all')} text="Todos" 
 						customClass={stack === 'all'? true : false}/>
 
@@ -119,7 +122,7 @@ export const Projects = () => {
 				
 
 			</div>
-
+			<ButtonUp />
 		</div>
 	)
 }

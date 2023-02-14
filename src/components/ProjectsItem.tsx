@@ -7,7 +7,7 @@ export const ProjectsItem = ({imgUri,imgAlt,name,techs}:projectProps) => {
                             min-h-32
                             w-72
                             h-72
-                            my-8
+                            mb-14
                             flex
                             items-end
                             rounded-xl
