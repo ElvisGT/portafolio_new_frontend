@@ -11,4 +11,5 @@
 
 html {
     font-family: 'Itim',cursive;
+    scroll-behavior: smooth;
 }
