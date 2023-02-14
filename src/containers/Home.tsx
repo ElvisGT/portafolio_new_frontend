@@ -17,7 +17,14 @@ export const Home = () => {
 				alt="Imagen de escritorio con laptop"
 
 			/>
-			<div className="absolute z-10 top-0">
+			<div className="absolute z-10 top-0 
+							md:flex 
+							md:flex-col 
+							md:h-screen
+							md:w-[calc(100vw_-_564px)]
+							md:right-16
+							md:items-center
+							md:justify-center">
 				<h1 className='text-6xl
 						text-white 
 						mt-16
