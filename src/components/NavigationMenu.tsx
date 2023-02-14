@@ -38,16 +38,21 @@ export const NavigationMenu = () => {
 					top-0
 					flex
 					bg-main
-                    md:border-r-2
+                    md:opacity-80
                     md:w-96
-                    md:h-screen">
+                    md:h-screen
+					">
 			<ul className="
-	  		w-full
-	  		flex 
-			items-center 
-			justify-between
-			overflow-x-scroll
-			flex-nowrap">
+				w-full
+				flex 
+				items-center 
+				justify-between
+				overflow-x-scroll
+				flex-nowrap
+				opacity:100
+				md:flex-col
+				md:justify-evenly
+				md:overflow-x-hidden">
 
 				{navigation.map((item) => (
 					<li className="
