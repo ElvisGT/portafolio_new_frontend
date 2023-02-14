@@ -26,6 +26,10 @@ const navigation: navigationMenuType[] = [
 
 
 export const NavigationMenu = () => {
+
+	const handleUp = () => {
+		window.scroll(0,0);
+	}
 	return (
 		<div className="w-screen 
                     h-16
@@ -53,6 +57,7 @@ export const NavigationMenu = () => {
 					text-white
 					"
 						key={item.link}
+						onClick={handleUp}
 					>
 						<NavLink to={item.link}
 							className={({ isActive }) =>
