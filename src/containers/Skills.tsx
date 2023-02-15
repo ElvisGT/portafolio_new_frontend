@@ -5,9 +5,12 @@ export const Skills = () => {
     const {frontend,backend} = useSkills()
     
     return (
-        <div className="bg-white min-h-screen">
-            <h2 className="text-3xl text-center py-4 drop-shadow-md">Frontend</h2>
-            <div className='flex flex-wrap justify-evenly'>
+        <div className="min-h-screen md:mt-12 
+                        md:w-10/12 
+                        md:m-auto 
+                       ">
+            <h2 className="text-3xl text-center py-4 drop-shadow-md md:mb-4">Frontend</h2>
+            <div className='flex flex-wrap justify-evenly md:mb-16'>
                 {frontend.length > 0 && 
                     frontend.map(skill => (
                         <ImageComponent src={skill.src}
@@ -19,7 +22,7 @@ export const Skills = () => {
                     ))
                 }
             </div>
-            <h2 className="text-3xl text-center py-4 drop-shadow-md">Backend</h2>
+            <h2 className="text-3xl text-center py-4 drop-shadow-md md:my-4">Backend</h2>
             <div className='flex flex-wrap justify-evenly'>
                 {backend.length > 0 && 
                         backend.map(skill => (

@@ -34,6 +34,7 @@ export const Home = () => {
 						z-10
 						leading-normal
 						opacity-100
+						md:text-center
 						'>
 					Bienvenido a mi <span className='italic font-bold'>Portafolio</span>
 				</h1>

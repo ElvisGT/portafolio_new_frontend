@@ -14,9 +14,9 @@ export const SocialNetworks = () => {
 		},
 	]
   return (
-	<div className="flex w-full justify-center bottom-10">
+	<div className="flex w-full justify-center">
 		{socialNetworks.map(network  => (
-			<a href={network.href} target={'_blank'}>
+			<a href={network.href} target={'_blank'} className="mx-4">
 				<ImageComponent src={network.src}
 					alt={network.alt}
 					width={'12'}

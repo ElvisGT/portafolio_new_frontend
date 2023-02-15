@@ -50,6 +50,7 @@ export const NavigationMenu = () => {
 				flex-nowrap
 				opacity:100
 				md:flex-col
+				md:w-80
 				md:justify-evenly
 				md:overflow-x-hidden">
 

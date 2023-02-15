@@ -5,7 +5,6 @@ export const About = () => {
   return (
     <div className="min-h-screen
                   w-screen
-                 bg-white 
                  z-0 
                  flex 
                  flex-col 
