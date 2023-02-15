@@ -16,12 +16,18 @@ export const SocialNetworks = () => {
   return (
 	<div className="flex w-full justify-center">
 		{socialNetworks.map(network  => (
-			<a href={network.href} target={'_blank'} className="mx-4">
+			<a href={network.href} target={'_blank'} 
+				className="mx-4 
+						md:hover:cursor-pointer 
+						">
 				<ImageComponent src={network.src}
 					alt={network.alt}
 					width={'12'}
 					height={'12'}
-				/>
+				    customClass={`md:hover:ring-alert 
+									
+									`}/>
+				
 			</a>
 		))}
 	</div>

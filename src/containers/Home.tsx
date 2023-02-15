@@ -4,13 +4,22 @@ import { SocialNetworks } from "../components/SocialNetworks"
 export const Home = () => {
 
 	return (
-		<div className="z-0">
-			<div className='bg-black opacity-70 w-full h-full top-0 z-10 fixed'>
+		<div className="z-0 fixed overflow-y-hidden">
+			<div className='bg-black opacity-70 
+							w-full 
+							min-h-screen 
+							top-0 
+							z-10 
+							fixed
+							
+							'>
 			</div>
 			<ImageComponent src="https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg"
 				customClass="
 					w-screen 
 					h-screen
+					rounded-none
+					m-0
 					object-cover
 					z-0
 					"
@@ -27,7 +36,7 @@ export const Home = () => {
 							md:justify-center">
 				<h1 className='text-6xl
 						text-white 
-						mt-16
+						md:mt-16
 						px-3
 						py-8
 						drop-shadow-2xl

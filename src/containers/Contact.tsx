@@ -24,12 +24,14 @@ export const Contact = () => {
 
 	}
 	return (
-		<div className="bg-white 
+		<div className="
 						min-h-screen 
 						w-full 
 						flex 
 						flex-col 
 						items-center 
+						md:pt-8
+						
 						">
 			<h2 className="text-3xl mt-8 mb-4 drop-shadow-md">Contacto</h2>
 			<SocialNetworks />
@@ -61,7 +63,9 @@ export const Contact = () => {
 									w-64
 									focus-visible:border-alert
 									focus-visible:border-4
-									shadow-lg"
+									shadow-lg
+									md:mt-8
+									md:w-80"
 						name="comment"
 						ref={inputComment} />
 				</label>

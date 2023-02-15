@@ -22,6 +22,7 @@ export const Button = ({ handleStack, text,customClass}: buttonProps) => {
                 rounded-xl 
                 m-4 
                 shadow-xl
+                md:hover:bg-alert
                 `}>
             {text}
         </button>

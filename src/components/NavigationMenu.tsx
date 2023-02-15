@@ -60,6 +60,7 @@ export const NavigationMenu = () => {
 					ml-4
 					mr-6 
 					text-white
+					md:text-xl
 					"
 						key={item.link}
 						onClick={handleUp}

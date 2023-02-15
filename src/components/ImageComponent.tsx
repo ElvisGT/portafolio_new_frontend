@@ -1,16 +1,16 @@
 import { imgProps } from "../types"
 
 export const ImageComponent = ({src,alt,height,width,customClass}:imgProps) => {
+    const defaultClass = `h-${height} w-${width} 
+                            object-contain
+                            rounded-full 
+                            ring-4 
+                            m-4
+                            ring-main`
     return (
         <img src={src} 
             alt={alt} 
-            className={customClass ? customClass :`h-${height} w-${width} 
-                        rounded-full 
-                        ring-4 
-                        ring-main 
-                        m-4
-                        object-contain
-                        `}/>
+            className={customClass ? `${defaultClass} ${customClass}` : defaultClass}/>
 
     )
 }
