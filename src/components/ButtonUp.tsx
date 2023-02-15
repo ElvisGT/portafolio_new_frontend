@@ -20,7 +20,9 @@ export const ButtonUp = () => {
 		<>
 			{button && 
 				<img onClick={handleUp}
-					className={'fixed bottom-5 right-6 z-20'} 
+					className={`fixed bottom-5 right-6 z-20 
+								md:hover:cursor-pointer
+								md:animate-bounce`} 
 					src="https://i.ibb.co/hfnp5g2/icons8-up-arrow-60-1.png"
 					alt="flecha arriba"/>
 				

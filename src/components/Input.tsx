@@ -16,7 +16,9 @@ import { inputProps } from "../types/inputProps"
                  h-12
                  focus-visible:border-alert
                  focus-visible:border-4
-                 shadow-lg"
+                 shadow-lg
+                 md:w-80
+                 md:mt-8"
           name={name}
           //@ts-ignore
            ref={ref}

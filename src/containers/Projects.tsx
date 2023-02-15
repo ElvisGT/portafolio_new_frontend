@@ -37,11 +37,13 @@ export const Projects = () => {
 
 	}
 	return (
-		<div id="projects" className="bg-white 
+		<div id="projects" className="
 							min-h-screen 
 							flex 
 							flex-col 
-							items-center ">
+							items-center
+							md:w-10/12
+                 			md:m-auto ">
 			<div className="mt-8">
 				<Input ref={inputRef}
 						name="projects"
@@ -69,7 +71,7 @@ export const Projects = () => {
 				
 						
 			</div>
-			<div>
+			<div className="md:flex md:flex-wrap md:justify-evenly md:w-full">
 				{finded.length > 0 &&
 					finded.map((item) => (
 					<ProjectsItem imgAlt={item.imgAlt}

@@ -11,6 +11,8 @@ export const ProjectsItem = ({imgUri,imgAlt,name,techs}:projectProps) => {
                             flex
                             items-end
                             rounded-xl
+                            md:w-80
+                            md:h-80
                             ">
             <img src={imgUri}
                 className="
@@ -22,6 +24,8 @@ export const ProjectsItem = ({imgUri,imgAlt,name,techs}:projectProps) => {
 							object-cover
 							absolute
 							rounded-xl
+                            md:w-80
+                            md:h-80
 							"
                 alt={imgAlt}
             />
@@ -32,7 +36,8 @@ export const ProjectsItem = ({imgUri,imgAlt,name,techs}:projectProps) => {
                             z-20
                             bottom-0
                             rounded-b-xl
-                            opacity-90">
+                            opacity-90
+                            md:w-80">
                 <div className="flex 
                                 justify-between 
                                 ml-4 
@@ -44,7 +49,9 @@ export const ProjectsItem = ({imgUri,imgAlt,name,techs}:projectProps) => {
                     <a className="bg-alert
                                     w-20
                                     text-center
-                                    rounded-lg" 
+                                    rounded-lg
+                                    md:hover:cursor-pointer
+                                   " 
                         href="#" 
                         target={"_blank"}>Enlace</a>
                 </div>
