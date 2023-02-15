@@ -1,9 +1,12 @@
-import { Layout } from "./containers/Layout";
+import { OutletContainer } from "./containers/OutletContainer";
+import { NavigationMenu } from './components/NavigationMenu';
+
 
 export default function App() {
 return (
-		<div className="w-full h-full md:flex">
-			<Layout />	
+		<div className="w-screen h-screen">
+			<NavigationMenu />
+			<OutletContainer />	
 		</div>
 	)
 }

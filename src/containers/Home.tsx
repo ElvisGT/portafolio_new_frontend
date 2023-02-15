@@ -21,7 +21,7 @@ export const Home = () => {
 							md:flex 
 							md:flex-col 
 							md:h-screen
-							md:w-[calc(100vw_-_24rem)]
+							md:w-[calc(100vw_-_20rem)]
 							md:right-0
 							md:items-center
 							md:justify-center">

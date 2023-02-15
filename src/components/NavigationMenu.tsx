@@ -38,8 +38,7 @@ export const NavigationMenu = () => {
 					top-0
 					flex
 					bg-main
-                    md:opacity-80
-                    md:w-96
+                    md:w-80
                     md:h-screen
 					">
 			<ul className="

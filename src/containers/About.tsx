@@ -10,12 +10,15 @@ export const About = () => {
                  flex 
                  flex-col 
                  items-center
-                 md:w-[calc(100vw_-_24rem)]
+                 md:w-10/12
+                 md:m-auto
                  ">
 
       <h2 className="font-bold 
                     text-3xl 
                     my-6
+                    md:mt-12
+                    
                     drop-shadow-md">
         ElvisGT
       </h2>
