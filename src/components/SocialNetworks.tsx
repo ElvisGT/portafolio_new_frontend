@@ -16,7 +16,9 @@ export const SocialNetworks = () => {
   return (
 	<div className="flex w-full justify-center">
 		{socialNetworks.map(network  => (
-			<a href={network.href} target={'_blank'} 
+			<a href={network.href} 
+				rel="preload"
+				target={'_blank'} 
 				className="mx-4 
 						md:hover:cursor-pointer 
 						">

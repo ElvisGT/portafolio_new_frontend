@@ -16,14 +16,14 @@ import { SocialNetworks } from "../components/SocialNetworks"
 			</div>
 			<ImageComponent src="https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg"
 				customClass="
-					w-screen 
-					h-screen
 					rounded-none
 					m-0
 					object-cover
 					z-0
 					"
 				alt="Imagen de escritorio con laptop"
+				width="screen"
+				height="screen"
 
 			/>
 			<div className="absolute z-10 top-0 

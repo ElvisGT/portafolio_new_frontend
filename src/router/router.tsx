@@ -15,7 +15,7 @@ export const router = createHashRouter([
         children: [
             {
               index:true,
-              element: <Home />
+              element:<Home />
             },
             {
               path: "/about",

@@ -3,6 +3,7 @@ import { Button } from '../components/Button'
 import { Input } from '../components/Input'
 import { SocialNetworks } from '../components/SocialNetworks'
 import { useContact } from '../hooks/useContact'
+import { navigationMenuType } from '../types'
 
 const Contact = () => {
 	const inputName = useRef(null)
@@ -11,7 +12,7 @@ const Contact = () => {
 
 	const handleSubmit = (event: FormEvent) => {
 		event.preventDefault()
-		const data = {
+		const data:navigationMenuType = {
 			//@ts-ignore
 			name: inputName.current?.value,
 			//@ts-ignore

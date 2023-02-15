@@ -11,6 +11,7 @@
 
 html {
     font-family: 'Itim',cursive;
+    font-display: swap;
     scroll-behavior: smooth;
 }
 
