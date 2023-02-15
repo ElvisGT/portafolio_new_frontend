@@ -4,7 +4,7 @@ import { Input } from '../components/Input'
 import { SocialNetworks } from '../components/SocialNetworks'
 import { useContact } from '../hooks/useContact'
 
-export const Contact = () => {
+const Contact = () => {
 	const inputName = useRef(null)
 	const inputEmail = useRef(null)
 	const inputComment = useRef(null)
@@ -74,3 +74,5 @@ export const Contact = () => {
 		</div>
 	)
 }
+
+export default Contact;

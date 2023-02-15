@@ -1,7 +1,7 @@
 import {ImageComponent} from '../components/ImageComponent'
 import { useSkills } from '../hooks/useSkills'
 
-export const Skills = () => {
+const Skills = () => {
     const {frontend,backend} = useSkills()
     
     return (
@@ -38,3 +38,6 @@ export const Skills = () => {
         </div>
     )
 }
+
+
+export default Skills;

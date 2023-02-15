@@ -1,7 +1,7 @@
 import { Button } from '../components/Button'
 import {ImageComponent} from '../components/ImageComponent'
 
-export const About = () => {
+const About = () => {
   return (
     <div className="min-h-screen
                   w-screen
@@ -40,3 +40,5 @@ export const About = () => {
     </div>
   )
 }
+
+export default About;

@@ -6,7 +6,7 @@ import { ProjectsItem } from "../components/ProjectsItem"
 import { useProjects } from "../hooks/useProjects"
 import { projectProps } from "../types"
 
-export const Projects = () => {
+const Projects = () => {
 	const [stack, setStack] = useState('all')
 	const inputRef = useRef(null) 
 	const {frontend,backend,fullstack,allProjects} = useProjects()
@@ -128,3 +128,6 @@ export const Projects = () => {
 		</div>
 	)
 }
+
+
+export default Projects;

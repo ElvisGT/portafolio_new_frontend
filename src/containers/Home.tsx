@@ -1,7 +1,7 @@
 import { ImageComponent } from "../components/ImageComponent"
 import { SocialNetworks } from "../components/SocialNetworks"
 
-export const Home = () => {
+ const Home = () => {
 
 	return (
 		<div className="z-0 fixed overflow-y-hidden">
@@ -55,3 +55,5 @@ export const Home = () => {
 		</div>
 	)
 }
+
+export default Home;
