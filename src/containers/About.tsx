@@ -4,11 +4,14 @@ import {ImageComponent} from '../components/ImageComponent'
 export const About = () => {
   return (
     <div className="min-h-screen
+                  w-screen
                  bg-white 
                  z-0 
                  flex 
                  flex-col 
-                 items-center">
+                 items-center
+                 md:w-[calc(100vw_-_24rem)]
+                 ">
 
       <h2 className="font-bold 
                     text-3xl 
