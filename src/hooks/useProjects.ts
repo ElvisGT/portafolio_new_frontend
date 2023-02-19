@@ -1,89 +1,47 @@
+import {useState} from 'react';
+import { projectProps } from '../types/projectProps';
 
 export const useProjects = () => {
-    //informacion de prueba
-    const data = {
-        frontend: [
-            {
-                imgAlt: "Mesa con laptop",
-                imgUri: "https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
-                name: "Proyecto 1",
-                techs: ['js', 'ts', 'react'],
-                stack: 'frontend'
-            },
+    const apiAll = 'https://portafolionewbackend-production.up.railway.app/api/v1/projects'
+    const apiFrontend = 'https://portafolionewbackend-production.up.railway.app/api/v1/projects/search/stack?projectStack=Frontend'
+    const apiBackend = 'https://portafolionewbackend-production.up.railway.app/api/v1/projects/search/stack?projectStack=Backend'
+    const apiFullstack = 'https://portafolionewbackend-production.up.railway.app/api/v1/projects/search/stack?projectStack=Fullstack'
+    
+    const [allProjects,setDataAllProjects] = useState(new Array<projectProps>)
+    const [frontend,setDataFrontend] = useState(new Array<projectProps>)
+    const [backend,setDataBackend] = useState(new Array<projectProps>)
+    const [fullstack,setDataFullstack] = useState(new Array<projectProps>)
 
-            {
-                imgAlt: "Mesa con laptop",
-                imgUri: "https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
-                name: "Proyecto 3",
-                techs: ['js', 'html', 'css'],
-                stack: 'frontend'
-            },
+    fetch(apiAll,{
+        method:'GET',
+    })
+    .then(response => response.json())
+    .then(info => setDataAllProjects(info.results))
 
-        ],
-        backend: [
-            {
-                imgAlt: "Mesa con laptop",
-                imgUri: "https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
-                name: "Proyecto 2",
-                techs: ['python'],
-                stack: 'backend'
-            },
-            {
-                imgAlt: "Mesa con laptop",
-                imgUri: "https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
-                name: "Proyecto 5",
-                techs: ['node','express','js'],
-                stack: 'backend'
-            },
-        ],
-        fullstack: [
-            {
-                imgAlt: "Mesa con laptop",
-                imgUri: "https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
-                name: "Proyecto 4",
-                techs: ['js', 'ts', 'react', 'mongodb', 'node', 'express', 'mysql', 'docker', 'python'],
-                stack: 'fullstack'
-            },
-        ],
-        allProjects:[
-            {
-                imgAlt: "Mesa con laptop",
-                imgUri: "https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
-                name: "Proyecto 4",
-                techs: ['js', 'ts', 'react', 'mongodb', 'node', 'express', 'mysql', 'docker', 'python'],
-                stack: 'fullstack'
-            },
-            {
-                imgAlt: "Mesa con laptop",
-                imgUri: "https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
-                name: "Proyecto 2",
-                techs: ['python'],
-                stack: 'backend'
-            },
-            {
-                imgAlt: "Mesa con laptop",
-                imgUri: "https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
-                name: "Proyecto 5",
-                techs: ['node','express','js'],
-                stack: 'backend'
-            },
-            {
-                imgAlt: "Mesa con laptop",
-                imgUri: "https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
-                name: "Proyecto 1",
-                techs: ['js', 'ts', 'react'],
-                stack: 'frontend'
-            },
+    fetch(apiFrontend,{
+        method:'GET',
+    })
+    .then(response => response.json())
+    .then(info => setDataFrontend(info.project))
 
-            {
-                imgAlt: "Mesa con laptop",
-                imgUri: "https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
-                name: "Proyecto 3",
-                techs: ['js', 'html', 'css'],
-                stack: 'frontend'
-            },
-        ]
-    }
+    fetch(apiBackend,{
+        method:'GET',
+    })
+    .then(response => response.json())
+    .then(info => setDataBackend(info.project))
 
-    return data
+    fetch(apiFullstack,{
+        method:'GET',
+    })
+    .then(response => response.json())
+    .then(info => setDataFullstack(info.project))
+
+    
+   return {
+    allProjects,
+    frontend,
+    backend,
+    fullstack
+   }
+
 }

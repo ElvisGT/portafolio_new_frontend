@@ -1,6 +1,6 @@
 import { projectProps } from "../types"
 
-export const ProjectsItem = ({imgUri,imgAlt,name,techs}:projectProps) => {
+export const ProjectsItem = ({imgUri,imgAlt,name,technologies}:projectProps) => {
     return (
         <div className="bg-alert
                             min-w-48
@@ -63,8 +63,9 @@ export const ProjectsItem = ({imgUri,imgAlt,name,techs}:projectProps) => {
                                 mb-2
                                 mt-1
                                 ">
-                   {techs.map(tech => (
-                    <p className="text-white mx-2 mb-2" key={tech}>{tech}</p>
+                   {technologies !== undefined &&
+                    technologies.map(tech => (
+                        <p className="text-white mx-2 mb-2" key={tech}>{tech}</p>
                    ))}
                 </div>
             </div>

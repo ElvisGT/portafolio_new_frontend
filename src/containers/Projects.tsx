@@ -9,7 +9,7 @@ import { projectProps } from "../types"
 const Projects = () => {
 	const [stack, setStack] = useState('all')
 	const inputRef = useRef(null) 
-	const {frontend,backend,fullstack,allProjects} = useProjects()
+	const {allProjects,frontend,backend,fullstack}= useProjects()
 	const [finded,setFinded] = useState(Array<projectProps>)
 
 	const handleSearch = () => {
@@ -77,46 +77,46 @@ const Projects = () => {
 					<ProjectsItem imgAlt={item.imgAlt}
 										imgUri={item.imgUri}
 										name={item.name}
-										techs={item.techs}
+										technologies={item.technologies}
 										stack={item.stack}
 										key={item.name}/>
 				))}
-				{(stack === 'all' && finded.length === 0) &&
+				{(stack === 'all' && finded.length === 0 && allProjects !== undefined) &&
 					allProjects.map(item => (
 						<ProjectsItem imgAlt={item.imgAlt}
 										imgUri={item.imgUri}
 										name={item.name}
-										techs={item.techs}
+										technologies={item.technologies}
 										stack={item.stack}
 										key={item.name}/>
 					))
 				}
-				{(stack === 'frontend' && finded.length === 0) &&
+				{(stack === 'frontend' && finded.length === 0 && frontend !== undefined) &&
 					frontend.map(item => (
 						<ProjectsItem imgAlt={item.imgAlt}
 										imgUri={item.imgUri}
 										name={item.name}
-										techs={item.techs}
+										technologies={item.technologies}
 										stack={item.stack}
 										key={item.name}/>
 					))
 				}
-				{(stack === 'backend' && finded.length === 0) &&
+				{(stack === 'backend' && finded.length === 0 && backend !== undefined) &&
 					backend.map(item => (
 						<ProjectsItem imgAlt={item.imgAlt}
 										imgUri={item.imgUri}
 										name={item.name}
-										techs={item.techs}
+										technologies={item.technologies}
 										stack={item.stack}
 										key={item.name}/>
 					))
 				}
-				{(stack === 'fullstack' && finded.length === 0) &&
+				{(stack === 'fullstack' && finded.length === 0 && fullstack !== undefined) &&
 					fullstack.map(item => (
 						<ProjectsItem imgAlt={item.imgAlt}
 										imgUri={item.imgUri}
 										name={item.name}
-										techs={item.techs}
+										technologies={item.technologies}
 										stack={item.stack}
 										key={item.name}/>
 					))
