@@ -26,10 +26,12 @@ export const SocialNetworks = () => {
 				>
 				<ImageComponent src={network.src}
 					alt={network.alt}
-					width={'12'}
-					height={'12'}
 				    customClass={`md:hover:ring-alert 
-									
+									rounded-full 
+                            		ring-4 
+                            		ring-main
+									w-12
+									h-12
 									`}/>
 				
 			</a>

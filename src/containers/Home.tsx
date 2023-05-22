@@ -11,7 +11,6 @@ import { SocialNetworks } from "../components/SocialNetworks"
 							top-0 
 							z-10 
 							fixed
-							
 							'>
 			</div>
 			<ImageComponent src="https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg"
@@ -20,6 +19,7 @@ import { SocialNetworks } from "../components/SocialNetworks"
 					m-0
 					object-cover
 					z-0
+					h-screen
 					"
 				alt="Imagen de escritorio con laptop"
 				width="screen"
@@ -38,6 +38,7 @@ import { SocialNetworks } from "../components/SocialNetworks"
 						text-white 
 						md:mt-16
 						px-3
+						ml-4
 						py-8
 						drop-shadow-2xl
 						z-10
