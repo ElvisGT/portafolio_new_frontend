@@ -10,7 +10,7 @@ export const ImageComponent = ({src,alt,height,width,customClass}:imgProps) => {
     return (
         <img src={src} 
             alt={alt} 
-            className={customClass ? `${defaultClass} ${customClass}` : defaultClass}/>
+            className={customClass ? `${customClass}` : defaultClass}/>
 
     )
 }
