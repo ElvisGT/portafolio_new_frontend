@@ -21,7 +21,9 @@ export const SocialNetworks = () => {
 				target={'_blank'} 
 				className="mx-4 
 						md:hover:cursor-pointer 
-						">
+						"
+				key={network.href}
+				>
 				<ImageComponent src={network.src}
 					alt={network.alt}
 					width={'12'}
