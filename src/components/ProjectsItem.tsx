@@ -2,7 +2,7 @@ import { projectProps } from "../types"
 
 export const ProjectsItem = ({imgUri,imgAlt,name,description}:projectProps) => {
     return (
-        <div className="bg-alert
+        <div className="bg-focus
                             w-72
                             min-h-96
                             mb-20
@@ -42,11 +42,13 @@ export const ProjectsItem = ({imgUri,imgAlt,name,description}:projectProps) => {
                                 text-white
                                 text-xl">
                     <h2 className="">{name}</h2>
-                    <a className="bg-alert
+                    <a className="bg-focus
                                     w-20
                                     text-center
                                     rounded-lg
                                     md:hover:cursor-pointer
+                                    hover:bg-alert
+                                    md:hover:animate-pulse
                                    " 
                         href="#" 
                         target={"_blank"}>Enlace</a>

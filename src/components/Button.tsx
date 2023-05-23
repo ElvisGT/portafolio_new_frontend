@@ -1,7 +1,7 @@
 import { buttonProps } from "../types"
 
 export const Button = ({ handleStack, text,customClass}: buttonProps) => {
-	const activeButtonStyles = `bg-alert px-4 w-auto 
+	const activeButtonStyles = `bg-focus px-4 w-auto 
                                 h-8 
                                 text-white 
                                 rounded-xl  
@@ -14,7 +14,8 @@ export const Button = ({ handleStack, text,customClass}: buttonProps) => {
     return (
         <button onClick={handleStack}
             className={customClass ? activeButtonStyles : 
-            `bg-main w-auto 
+            `bg-main 
+                w-auto 
                 px-4 
                 min-h-8 
                 h-8 
@@ -22,7 +23,8 @@ export const Button = ({ handleStack, text,customClass}: buttonProps) => {
                 rounded-xl 
                 m-2 
                 shadow-xl
-                md:hover:bg-alert
+                md:hover:bg-focus
+                md:hover:animate-pulse
                 `}>
             {text}
         </button>
