@@ -15,8 +15,8 @@ const About = () => {
 
       <h2 className="font-bold 
                     text-3xl 
-                    my-6
-                    md:mt-12
+                    my-8
+                    
                     
                     drop-shadow-md">
         ElvisGT
@@ -26,7 +26,7 @@ const About = () => {
         height='56'
         width='56'
       />
-      <a  href="pdf/Elvis-CV.pdf" download="Elvis-CV.pdf" className='mt-4'>
+      <a  href="pdf/Elvis-CV-Programador.pdf" download="Elvis-CV-Programador.pdf" className='mt-12 mb-2'>
         <Button text='Descargar CV' type='button'/>
       </a>
       <p className="mx-2 my-8 leading-normal text-lg text-center">Mi nombre es Elvis y soy un desarrollador de software 

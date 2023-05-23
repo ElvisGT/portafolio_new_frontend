@@ -12,18 +12,24 @@ const Skills = () => {
                         flex 
                         flex-col 
                         items-center  
-                        md:mt-12 
+                        md:my-0
                         md:w-10/12 
-                        md:m-auto 
+                        md:mx-auto
                        "
     >
         <PageTitle title={'Frontend'}/>
-      <div className="flex flex-wrap justify-evenly md:mb-16 w-full">
+      <div className="flex flex-wrap 
+                      justify-evenly 
+                      mt-5 
+                      w-full">
         {frontend.length> 0 &&
           frontend.map((skill) => (
             <div
               key={skill.src}
-              className="w-20 justify-center items-center m-4"
+              className="w-20 justify-center 
+                          items-center 
+                          m-4
+                          md:m-8"
             >
               <ImageComponent
                 src={skill.src}
@@ -39,12 +45,18 @@ const Skills = () => {
 
       <PageTitle title={'Backend'}/>
       
-      <div className="flex flex-wrap justify-evenly md:mb-16 w-full">
+      <div className="flex flex-wrap 
+                      justify-evenly 
+                      mt-5 
+                      w-full">
         {backend.length > 0 &&
           backend.map((skill) => (
             <div
               key={skill.src}
-              className="w-20 justify-center items-center m-4"
+              className="w-20 justify-center 
+                          items-center 
+                          m-4
+                          md:m-8"
             >
               <ImageComponent
                 src={skill.src}

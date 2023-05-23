@@ -17,7 +17,8 @@ export const useProjects = () => {
                 imgAlt: "Mesa con laptop",
                 imgUri: "https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
                 name: "Proyecto 3",
-                description: 'js',
+                description: `Proyecto para ser millonario en poco tiempo y con poca inversion,
+                se debe de desarrollar en node y tiene que `,
                 stack: 'frontend'
             },
 

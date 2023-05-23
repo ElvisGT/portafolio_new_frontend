@@ -59,7 +59,7 @@ const Projects = () => {
 							justify-evenly 
 							flex-wrap
 							min-w-80
-							my-8">
+							my-12">
 				<Button type="text" handleStack={() => handleStack('all')} text="Todos" 
 						customClass={stack === 'all'? true : false}/>
 
