@@ -1,12 +1,10 @@
 import { projectProps } from "../types"
 
-export const ProjectsItem = ({imgUri,imgAlt,name,techs}:projectProps) => {
+export const ProjectsItem = ({imgUri,imgAlt,name,description}:projectProps) => {
     return (
         <div className="bg-alert
-                            min-w-48
-                            min-h-32
                             w-72
-                            h-72
+                            h-96
                             mb-14
                             flex
                             items-end
@@ -16,11 +14,9 @@ export const ProjectsItem = ({imgUri,imgAlt,name,techs}:projectProps) => {
                             ">
             <img src={imgUri}
                 className="
-                            min-w-48
-                            min-h-32
 							z-0 
 							w-72
-							h-72
+							h-96
 							object-cover
 							absolute
 							rounded-xl
@@ -31,12 +27,11 @@ export const ProjectsItem = ({imgUri,imgAlt,name,techs}:projectProps) => {
             />
             <div className="
                             w-72
-                            min-h-36
+                            h-52
                             bg-main 
                             z-20
                             bottom-0
                             rounded-b-xl
-                            opacity-90
                             md:w-80">
                 <div className="flex 
                                 justify-between 
@@ -63,9 +58,7 @@ export const ProjectsItem = ({imgUri,imgAlt,name,techs}:projectProps) => {
                                 mb-2
                                 mt-1
                                 ">
-                   {techs.map(tech => (
-                    <p className="text-white mx-2 mb-2" key={tech}>{tech}</p>
-                   ))}
+                    <p className="text-white mx-2 mb-2">{description}</p>
                 </div>
             </div>
         </div>

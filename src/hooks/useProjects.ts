@@ -7,7 +7,9 @@ export const useProjects = () => {
                 imgAlt: "Mesa con laptop",
                 imgUri: "https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
                 name: "Proyecto 1",
-                techs: ['js', 'ts', 'react'],
+                description: `Proyecto para ser millonario en poco tiempo y con poca inversion,
+                se debe de desarrollar en node y tiene que tener siempre una base de datos para 
+                almacenar todo el flujo de la aplicacion`,
                 stack: 'frontend'
             },
 
@@ -15,7 +17,7 @@ export const useProjects = () => {
                 imgAlt: "Mesa con laptop",
                 imgUri: "https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
                 name: "Proyecto 3",
-                techs: ['js', 'html', 'css'],
+                description: 'js',
                 stack: 'frontend'
             },
 
@@ -25,14 +27,14 @@ export const useProjects = () => {
                 imgAlt: "Mesa con laptop",
                 imgUri: "https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
                 name: "Proyecto 2",
-                techs: ['python'],
+                description: 'python',
                 stack: 'backend'
             },
             {
                 imgAlt: "Mesa con laptop",
                 imgUri: "https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
                 name: "Proyecto 5",
-                techs: ['node','express','js'],
+                description: 'node',
                 stack: 'backend'
             },
         ],
@@ -41,48 +43,11 @@ export const useProjects = () => {
                 imgAlt: "Mesa con laptop",
                 imgUri: "https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
                 name: "Proyecto 4",
-                techs: ['js', 'ts', 'react', 'mongodb', 'node', 'express', 'mysql', 'docker', 'python'],
+                description: 'mysql',
                 stack: 'fullstack'
             },
         ],
-        allProjects:[
-            {
-                imgAlt: "Mesa con laptop",
-                imgUri: "https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
-                name: "Proyecto 4",
-                techs: ['js', 'ts', 'react', 'mongodb', 'node', 'express', 'mysql', 'docker', 'python'],
-                stack: 'fullstack'
-            },
-            {
-                imgAlt: "Mesa con laptop",
-                imgUri: "https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
-                name: "Proyecto 2",
-                techs: ['python'],
-                stack: 'backend'
-            },
-            {
-                imgAlt: "Mesa con laptop",
-                imgUri: "https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
-                name: "Proyecto 5",
-                techs: ['node','express','js'],
-                stack: 'backend'
-            },
-            {
-                imgAlt: "Mesa con laptop",
-                imgUri: "https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
-                name: "Proyecto 1",
-                techs: ['js', 'ts', 'react'],
-                stack: 'frontend'
-            },
-
-            {
-                imgAlt: "Mesa con laptop",
-                imgUri: "https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg",
-                name: "Proyecto 3",
-                techs: ['js', 'html', 'css'],
-                stack: 'frontend'
-            },
-        ]
+        
     }
 
     return data
