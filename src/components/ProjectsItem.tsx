@@ -4,39 +4,40 @@ export const ProjectsItem = ({imgUri,imgAlt,name,description}:projectProps) => {
     return (
         <div className="bg-alert
                             w-72
-                            h-96
-                            mb-14
+                            min-h-96
+                            mb-20
                             flex
+                            flex-col
                             items-end
                             rounded-xl
                             md:w-80
-                            md:h-80
+                            md:mx-4
                             ">
             <img src={imgUri}
                 className="
 							z-0 
+							h-[calc(384px - 192px)]
 							w-72
-							h-96
 							object-cover
-							absolute
-							rounded-xl
+                            rounded-tl-xl
+                            rounded-tr-xl
                             md:w-80
-                            md:h-80
 							"
                 alt={imgAlt}
             />
             <div className="
                             w-72
+                            md:w-80
                             h-52
                             bg-main 
                             z-20
                             bottom-0
                             rounded-b-xl
-                            md:w-80">
+                            ">
                 <div className="flex 
                                 justify-between 
                                 ml-4 
-                                my-2 
+                                mt-4 
                                 w-10/12
                                 text-white
                                 text-xl">
@@ -51,14 +52,11 @@ export const ProjectsItem = ({imgUri,imgAlt,name,description}:projectProps) => {
                         target={"_blank"}>Enlace</a>
                 </div>
                 <div className="flex 
-                                justify-evenly
+                                items-center
                                 flex-wrap 
-                                w-10/12
-                                mx-4
-                                mb-2
-                                mt-1
+                                m-4
                                 ">
-                    <p className="text-white mx-2 mb-2">{description}</p>
+                    <p className="text-white mx-2 my-2 italic">{description}</p>
                 </div>
             </div>
         </div>

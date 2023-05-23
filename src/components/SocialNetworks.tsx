@@ -19,7 +19,7 @@ export const SocialNetworks = () => {
 			<a href={network.href} 
 				rel="preload"
 				target={'_blank'} 
-				className="mx-4 
+				className="mx-8 
 						md:hover:cursor-pointer 
 						"
 				key={network.href}

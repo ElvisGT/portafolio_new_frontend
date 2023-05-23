@@ -32,7 +32,6 @@ const Contact = () => {
 						flex 
 						flex-col 
 						items-center 
-						md:pt-8
 						">
 
 			<PageTitle title={'Contacto'}/>
