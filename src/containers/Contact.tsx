@@ -4,6 +4,7 @@ import { Input } from '../components/Input'
 import { SocialNetworks } from '../components/SocialNetworks'
 import { useContact } from '../hooks/useContact'
 import { navigationMenuType } from '../types'
+import { PageTitle } from '../components/PageTitle'
 
 const Contact = () => {
 	const inputName = useRef(null)
@@ -32,9 +33,10 @@ const Contact = () => {
 						flex-col 
 						items-center 
 						md:pt-8
-						
 						">
-			<h2 className="text-3xl mt-8 mb-4 drop-shadow-md">Contacto</h2>
+
+			<PageTitle title={'Contacto'}/>
+
 			<SocialNetworks />
 			<form onSubmit={handleSubmit} className="flex flex-col justify-evenly items-center h-96">
 				<label htmlFor="name">
