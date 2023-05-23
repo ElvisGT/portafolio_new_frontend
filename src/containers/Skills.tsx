@@ -1,5 +1,5 @@
 import { ImageComponent } from "../components/ImageComponent";
-import { TechTitle } from "../components/TechTitle";
+import { PageTitle } from "../components/PageTitle";
 import { useSkills } from "../hooks/useSkills";
 
 const Skills = () => {
@@ -7,14 +7,19 @@ const Skills = () => {
 
   return (
     <div
-      className="min-h-screen md:mt-12 
+      className="min-h-screen
+                        w-full
+                        flex 
+                        flex-col 
+                        items-center  
+                        md:mt-12 
                         md:w-10/12 
                         md:m-auto 
                        "
     >
-        <TechTitle title={'Frontend'}/>
+        <PageTitle title={'Frontend'}/>
       <div className="flex flex-wrap justify-evenly md:mb-16 w-full">
-        {frontend.length > 0 &&
+        {frontend.length> 0 &&
           frontend.map((skill) => (
             <div
               key={skill.src}
@@ -32,9 +37,9 @@ const Skills = () => {
           ))}
       </div>
 
-      <TechTitle title={'Backend'}/>
+      <PageTitle title={'Backend'}/>
       
-      <div className="flex flex-wrap justify-evenly">
+      <div className="flex flex-wrap justify-evenly md:mb-16 w-full">
         {backend.length > 0 &&
           backend.map((skill) => (
             <div

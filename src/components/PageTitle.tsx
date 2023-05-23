@@ -1,6 +1,6 @@
-import { techTitle } from "../types/techtitle";
+import { pageTitle } from "../types/pageTitle";
 
-export const TechTitle = ({title}:techTitle) => {
+export const PageTitle = ({title}:pageTitle) => {
     return (
         <h2
             className="text-3xl 
@@ -13,6 +13,7 @@ export const TechTitle = ({title}:techTitle) => {
                             outline-2
                             text-main
                             shadow-xl
+                            w-full
                             "
         >
             {title}

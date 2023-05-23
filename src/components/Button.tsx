@@ -6,7 +6,7 @@ export const Button = ({ handleStack, text,customClass}: buttonProps) => {
                                 text-white 
                                 rounded-xl  
                                 shadow-xl
-                                m-4
+                                m-2
                                 md:hover:cursor-pointer
                                 md:animate-bounce
 								`
@@ -20,7 +20,7 @@ export const Button = ({ handleStack, text,customClass}: buttonProps) => {
                 h-8 
                 text-white 
                 rounded-xl 
-                m-4 
+                m-2 
                 shadow-xl
                 md:hover:bg-alert
                 `}>

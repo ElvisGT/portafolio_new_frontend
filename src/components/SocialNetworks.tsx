@@ -14,7 +14,7 @@ export const SocialNetworks = () => {
 		},
 	]
   return (
-	<div className="flex w-full justify-center">
+	<div className="flex w-full justify-center my-4">
 		{socialNetworks.map(network  => (
 			<a href={network.href} 
 				rel="preload"
