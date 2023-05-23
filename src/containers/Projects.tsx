@@ -9,7 +9,8 @@ import { projectProps } from "../types"
 const Projects = () => {
 	const [stack, setStack] = useState('all')
 	const inputRef = useRef(null) 
-	const {frontend,backend,fullstack,allProjects} = useProjects()
+	const {frontend,backend,fullstack} = useProjects()
+	const allProjects = [...frontend,...backend,...fullstack]; 
 	const [finded,setFinded] = useState(Array<projectProps>)
 
 	const handleSearch = () => {
@@ -28,13 +29,15 @@ const Projects = () => {
 			setFinded([])
 			setStack('all')
 		}
+
+
 	}	
 
 	
 
 	const handleStack = (stack: string) => {
-		setStack(stack)
-
+		setStack(stack);
+		window.scrollTo(0,200);
 	}
 	return (
 		<div id="projects" className="
@@ -71,13 +74,16 @@ const Projects = () => {
 				
 						
 			</div>
-			<div className="md:flex md:flex-wrap md:justify-evenly md:w-full">
+			<div className="md:flex 
+							md:flex-wrap 
+							md:justify-evenly 
+							md:w-full">
 				{finded.length > 0 &&
 					finded.map((item) => (
 					<ProjectsItem imgAlt={item.imgAlt}
 										imgUri={item.imgUri}
 										name={item.name}
-										techs={item.techs}
+										description={item.description}
 										stack={item.stack}
 										key={item.name}/>
 				))}
@@ -86,7 +92,7 @@ const Projects = () => {
 						<ProjectsItem imgAlt={item.imgAlt}
 										imgUri={item.imgUri}
 										name={item.name}
-										techs={item.techs}
+										description={item.description}
 										stack={item.stack}
 										key={item.name}/>
 					))
@@ -96,7 +102,7 @@ const Projects = () => {
 						<ProjectsItem imgAlt={item.imgAlt}
 										imgUri={item.imgUri}
 										name={item.name}
-										techs={item.techs}
+										description={item.description}
 										stack={item.stack}
 										key={item.name}/>
 					))
@@ -106,7 +112,7 @@ const Projects = () => {
 						<ProjectsItem imgAlt={item.imgAlt}
 										imgUri={item.imgUri}
 										name={item.name}
-										techs={item.techs}
+										description={item.description}
 										stack={item.stack}
 										key={item.name}/>
 					))
@@ -116,7 +122,7 @@ const Projects = () => {
 						<ProjectsItem imgAlt={item.imgAlt}
 										imgUri={item.imgUri}
 										name={item.name}
-										techs={item.techs}
+										description={item.description}
 										stack={item.stack}
 										key={item.name}/>
 					))
