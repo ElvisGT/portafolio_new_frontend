@@ -34,10 +34,10 @@ export const NavigationMenu = () => {
 		<div className="w-screen 
                     h-16
                     z-30 
-					fixed
 					top-0
 					flex
 					bg-main
+					fixed
                     md:w-80
                     md:h-screen
 					">

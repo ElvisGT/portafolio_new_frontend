@@ -5,12 +5,12 @@ export const ImageComponent = ({src,alt,height,width,customClass}:imgProps) => {
                             object-contain
                             rounded-full 
                             ring-4 
-                            m-4
-                            ring-main`
+                            ring-main
+                            m-0`
     return (
         <img src={src} 
             alt={alt} 
-            className={customClass ? `${customClass}` : defaultClass}/>
+            className={customClass ? `${customClass} ${defaultClass}` : defaultClass}/>
 
     )
 }
