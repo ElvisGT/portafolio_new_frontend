@@ -31,7 +31,8 @@ const Contact = () => {
 						w-full 
 						flex 
 						flex-col 
-						items-center 
+						items-center
+						justify-evenly 
 						">
 
 			<PageTitle title={'Contacto'}/>

@@ -10,7 +10,7 @@ import { inputProps } from "../types/inputProps"
             className="border-main
                  outline-none
                  border-2
-                 p-2
+                 p-4
                  rounded-xl
                  w-64
                  h-12

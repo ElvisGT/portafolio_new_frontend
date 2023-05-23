@@ -13,7 +13,7 @@ import { SocialNetworks } from "../components/SocialNetworks"
 							fixed
 							'>
 			</div>
-			<ImageComponent src="https://i.ibb.co/PW0J0wW/pexels-andrew-neel-2312369-compressed.jpg"
+			<ImageComponent src="https://i.ibb.co/60CDxVw/pexels-danny-meneses-943096-compressed.jpg"
 				customClass="
 					rounded-none
 					m-0
@@ -21,7 +21,7 @@ import { SocialNetworks } from "../components/SocialNetworks"
 					z-0
 					h-screen
 					"
-				alt="Imagen de escritorio con laptop"
+				alt="Imagen de escritorio con codigo"
 				width="screen"
 				height="screen"
 
@@ -46,7 +46,7 @@ import { SocialNetworks } from "../components/SocialNetworks"
 						opacity-100
 						md:text-center
 						'>
-					Bienvenido a mi <span className='italic font-bold'>Portafolio</span>
+					Bienvenido a mi <span className='italic font-bold text-focus'>Portafolio</span>
 				</h1>
 
 				<SocialNetworks />

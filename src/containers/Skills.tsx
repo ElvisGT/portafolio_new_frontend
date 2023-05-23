@@ -25,7 +25,7 @@ const Skills = () => {
         {frontend.length> 0 &&
           frontend.map((skill) => (
             <div
-              key={skill.src}
+              key={skill.name}
               className="w-20 justify-center 
                           items-center 
                           m-4
@@ -36,7 +36,7 @@ const Skills = () => {
                 alt={skill.alt}
                 height="20"
                 width="20"
-                key={skill.src}
+                key={skill.name}
               />
               <h2 className="my-4 text-center">{skill.name}</h2>
             </div>
@@ -63,7 +63,7 @@ const Skills = () => {
                 alt={skill.alt}
                 height="20"
                 width="20"
-                key={skill.src}
+                key={skill.name}
               />
               <h2 className="my-4 text-center">{skill.name}</h2>
             </div>
