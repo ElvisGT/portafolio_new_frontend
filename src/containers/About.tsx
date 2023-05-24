@@ -9,7 +9,7 @@ const About = () => {
                  z-0 
                  md:w-10/12
                  md:m-auto
-                 md:overflow-y-hidden
+                 overflow-y-hidden
                  "
     >
       <div
@@ -19,7 +19,8 @@ const About = () => {
                   justify-evenly
                   items-center
                   h-48
-                  my-28
+                  mt-16
+                  mb-28
                   md:mt-28
                   md:mb-12
                   "

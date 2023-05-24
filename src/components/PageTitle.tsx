@@ -7,7 +7,8 @@ export const PageTitle = ({title}:pageTitle) => {
                             text-center 
                             py-4
                             drop-shadow-lg
-                            my-6
+                            mt-6
+                            mb-12
                             outline-alert 
                             outline 
                             outline-2

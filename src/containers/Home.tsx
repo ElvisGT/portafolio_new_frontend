@@ -11,6 +11,7 @@ import { SocialNetworks } from "../components/SocialNetworks"
 							top-0 
 							z-10 
 							fixed
+							overflow-y-hidden
 							'>
 			</div>
 			<ImageComponent src="https://i.ibb.co/60CDxVw/pexels-danny-meneses-943096-compressed.jpg"
