@@ -36,7 +36,7 @@ import { SocialNetworks } from "../components/SocialNetworks"
 							md:justify-center">
 				<h1 className='text-6xl
 						text-white 
-						md:mt-16
+						mt-16
 						px-3
 						ml-4
 						py-8
@@ -44,7 +44,7 @@ import { SocialNetworks } from "../components/SocialNetworks"
 						z-10
 						leading-normal
 						opacity-100
-						md:text-center
+						text-center
 						'>
 					Bienvenido a mi <span className='italic font-bold text-focus'>Portafolio</span>
 				</h1>

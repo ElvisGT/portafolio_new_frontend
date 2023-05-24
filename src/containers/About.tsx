@@ -13,17 +13,22 @@ const About = () => {
                  "
     >
       <div
-        className="md:flex
-                 md:justify-evenly
-                 md:items-center
-                 md:h-48
-                 md:mt-28
-                 "
+        className="flex
+                  flex-col
+                  md:flex-row
+                  justify-evenly
+                  items-center
+                  h-48
+                  my-28
+                  md:mt-28
+                  md:mb-12
+                  "
       >
         <h2
           className="font-bold 
-                    text-3xl 
-                    my-8
+                    text-3xl
+                    mt-12 
+                    mb-8
                     drop-shadow-md"
         >
           ElvisGT
@@ -32,7 +37,7 @@ const About = () => {
           <ImageComponent
             src="https://i.ibb.co/YQrxrSV/20230501-173727-1.jpg"
             alt="Imagen de ElvisGT"
-            customClass="w-40 h-40 object-cover"
+            customClass="w-40 h-40 object-cover mb-8"
           />
         </a>
         <a
@@ -42,7 +47,11 @@ const About = () => {
           <Button text="Descargar CV" type="button" />
         </a>
       </div>
-      <p className="mx-2 my-8 leading-normal text-lg text-center text-font">
+      <p className="mx-2 
+                    leading-normal 
+                    text-lg 
+                    text-center 
+                    text-font">
         Mi nombre es Elvis y soy un desarrollador de software apasionado por la
         programación y los ordenadores. LLevo 3 años en el mundo de la programación
         superándome de forma autodidacta, realizando numerosos proyectos tanto
