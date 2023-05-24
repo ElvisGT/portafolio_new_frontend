@@ -42,7 +42,7 @@ const About = () => {
           <Button text="Descargar CV" type="button" />
         </a>
       </div>
-      <p className="mx-2 my-8 leading-normal text-lg text-center">
+      <p className="mx-2 my-8 leading-normal text-lg text-center text-font">
         Mi nombre es Elvis y soy un desarrollador de software apasionado por la
         programación y los ordenadores. LLevo 3 años en el mundo de la programación
         superándome de forma autodidacta, realizando numerosos proyectos tanto
