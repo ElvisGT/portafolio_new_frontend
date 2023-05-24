@@ -38,7 +38,7 @@ const Skills = () => {
                 width="20"
                 key={skill.name}
               />
-              <h2 className="my-4 text-center">{skill.name}</h2>
+              <h2 className="my-4 text-center text-font">{skill.name}</h2>
             </div>
           ))}
       </div>
@@ -65,7 +65,7 @@ const Skills = () => {
                 width="20"
                 key={skill.name}
               />
-              <h2 className="my-4 text-center">{skill.name}</h2>
+              <h2 className="my-4 text-center text-font">{skill.name}</h2>
             </div>
           ))}
       </div>

@@ -12,13 +12,14 @@ module.exports = {
       }
     },
     fontFamily:{
-      'Itim':['Itim']
+      'sans': ['lato','sans-serif'],
     },
     colors:{
       ...colors,
       'main':'#24292F',
       'alert':'#FF575A',
-      'focus':'#ba181b'
+      'focus':'#ba181b',
+      'font':'#273b47'
     },
     
   },
