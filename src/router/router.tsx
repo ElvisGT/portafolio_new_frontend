@@ -3,10 +3,13 @@ import {createHashRouter} from 'react-router-dom'
 import App from '../App'
 import { Loading } from '../components/Loading';
 import Home from '../containers/Home';
+import {Login} from '../admin/containers/Login';
+import { Add } from '../admin/containers/Add';
 const About = lazy(() => import('../containers/About'))
 const Contact = lazy(() => import('../containers/Contact'))
 const Projects = lazy(() => import('../containers/Projects'))
 const Skills = lazy(() => import('../containers/Skills'))
+
 
 export const router = createHashRouter([
     {
@@ -43,5 +46,13 @@ export const router = createHashRouter([
               }
           ],
     },
+    {
+      path:'/login',
+      element:<Login />
+    },
+    {
+      path:'/add',
+      element:<Add />
+    }
     
 ])
